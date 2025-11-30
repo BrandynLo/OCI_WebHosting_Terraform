@@ -184,6 +184,33 @@ These keys will be located in ~/.ssh/my_oci_key.pub
 ```bash
 sudo apt update && sudo apt install -y ansible
 ```
+**Deploy with Terraform**
+1. Initialize the Terraform configuration:
+```bash
+   $ terraform init
+```
+<img width="756" height="354" alt="image" src="https://github.com/user-attachments/assets/4c8c0896-8b1a-4dfd-9416-0b6b22f0bf15" />
+
+# Apply the configuration to create the VCN:
+- You will be prompted for container ID. This is located on your OCI container. 
+- Below is CODE Syntax:
+```bash
+# 1. Deploy (just pass compartment ID)
+terraform apply -var="compartment_id=ocid1.compartment.oc1..aaaa..."
+
+# 1.5 Deploy Just One Container
+terraform apply
+
+# 2. VMs with default names
+terraform apply -var="compartment_id=..." -var="vm_count=5"
+
+# 3. VMs with custom names  
+terraform apply -var="compartment_id=..." -var='vm_names=["web1","db1","app1"]'
+
+# 4. Both together
+terraform apply -var="compartment_id=..." -var="vm_count=5" -var='vm_names=["web1","db2","app1","cache1","cache2"]'
+```
+
 <img width="1918" height="1030" alt="image" src="https://github.com/user-attachments/assets/e256fa9d-336b-4eaa-96b8-cb827d40b13f" />
 <img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/926fdf9c-3198-4cad-9165-9bcc81d1d35f" />
 
