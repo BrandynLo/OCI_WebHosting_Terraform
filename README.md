@@ -97,10 +97,6 @@ This repository deploys **fully hardened, auto-updating LAMP + PostgreSQL 16** s
 | **Principle of Least Privilege** | Web files owned by `www-data`<br>Minimal packages installed                                                                                       |
 | **SSH Access**               | Only your public key (`~/.ssh/my_oci_key.pub`) is authorized – password authentication is impossible                                                |
 
-### Result
-You get a **production-grade, auto-patched, zero-info-leak web server** .  
-I plan on implementing HTTPS at a later time. 
-
 
 # Step 1. Clone the repository:
 
