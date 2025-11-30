@@ -4,8 +4,7 @@
 [![OCI Provider](https://img.shields.io/badge/OCI%20Provider-v5%2B-orange.svg)](https://registry.terraform.io/providers/hashicorp/oci/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This Terraform repository automates the deployment of real, live, publicly accessible web servers running on Oracle Cloud Infrastructure (OCI). The servers are pre-configured with a fully functional LAMP stack (Apache, PHP, PostgreSQL) and are ready to be used for a variety of web applications.
-
+This Terraform repository automates the provisioning of production-ready, publicly accessible web servers on Oracle Cloud Infrastructure (OCI). Each instance is deployed with a fully hardened LAMP stack (Ubuntu 22.04, Apache, PHP 8, PostgreSQL 16) including automatic security updates, modern HTTP headers, and server-side hardening applied immediately via Ansible.
 ## Features
 
 - **Fully Automated Deployment:** Provision real, live web servers on Oracle Cloud with a simple `terraform apply` command.
