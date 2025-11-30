@@ -1,9 +1,8 @@
-#  Terraform OCI VM & VCN Setup
+
+# Oracle Cloud Web Server Provisioning with Terraform
 [![Terraform](https://img.shields.io/badge/Terraform-v1.5%2B-blue.svg)](https://www.terraform.io/)
 [![OCI Provider](https://img.shields.io/badge/OCI%20Provider-v5%2B-orange.svg)](https://registry.terraform.io/providers/hashicorp/oci/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-# Oracle Cloud Web Server Provisioning with Terraform
 
 This Terraform repository automates the deployment of real, live, publicly accessible web servers running on Oracle Cloud Infrastructure (OCI). The servers are pre-configured with a fully functional LAMP stack (Apache, PHP, PostgreSQL) and are ready to be used for a variety of web applications.
 
