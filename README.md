@@ -106,7 +106,7 @@ I plan on implementing HTTPS at a later time.
 # Step 1. Clone the repository:
 
    ```bash
-   git clone github.com/BrandynLo/OCS_WebHosting_Terraform
+   git clone github.com/BrandynLo/OCI_WebHosting_Terraform
    ```
 
 ## Prerequisites
