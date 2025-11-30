@@ -192,7 +192,7 @@ sudo apt update && sudo apt install -y ansible
 <img width="756" height="354" alt="image" src="https://github.com/user-attachments/assets/4c8c0896-8b1a-4dfd-9416-0b6b22f0bf15" />
 
 # Apply the configuration to create the VCN:
-- You will be prompted for container ID. This is located on your OCI container. 
+- You will be prompted for compartment ID. This is located on your OCI container you made on the OCI website. 
 - Below is CODE Syntax:
 ```bash
 # 1. Deploy (just pass compartment ID)
