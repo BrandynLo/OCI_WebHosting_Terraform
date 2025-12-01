@@ -38,14 +38,6 @@ This Terraform repository automates the provisioning of production-ready, public
 | **Public IPs**    | Yes, each VM gets a real public IP                            |
 | **Cloud-Init + Ansible** | Runs immediately after first boot – zero manual steps    |
 
-## What You Get After Running `terraform apply`
-
-1. **Real Ubuntu VMs** – Deployed on your Oracle Cloud tenancy
-2. **Publicly Accessible Servers** – Reachable at `http://<public-ip>` within ~5 minutes
-3. **Fully Working LAMP + PostgreSQL Stack** – Ready for use with WordPress, Laravel, Symfony, static sites, APIs, or any PHP-based application
-4. **SSH Access** – Secure access via SSH with your own key
-5. **Automated Networking and Security** – All networking, security lists, routes, and provisioning are fully automated
-
 ## Prerequisites
 
 - **Terraform** – Ensure you have Terraform installed. [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
