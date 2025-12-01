@@ -65,14 +65,21 @@ This Terraform repository automates the provisioning of production-ready, public
 ## Security Overview – Hardened & Ready for Production
 
 This repository deploys **fully hardened, auto-updating LAMP + PostgreSQL 16** servers on Oracle Cloud.
+## !! Security Note !!
+
+Currently port 80 is open, HTTP only:
+
+- No encryption (plain HTTP)
+- No authentication
+- !! Web Servers are only configured with HTTP as of Nov, 2025  !!
 
 ### Open Ports (Controlled at OCI Security List Level)
 
 | Port | Protocol | Purpose               | Open to         | Security Status                                      |
 |------|----------|-----------------------|-----------------|------------------------------------------------------|
 | 22   | TCP      | SSH access            | 0.0.0.0/0       | **Key-only authentication** (password login disabled) |
-| 80   | TCP      | HTTP web server       | 0.0.0.0/0       | Open (plain HTTP – ready for Let’s Encrypt)          |
-| 443  | TCP      | HTTPS                 | 0.0.0.0/0       | Open and waiting for SSL certificate                 |
+| 80   | TCP      | HTTP web server       | 0.0.0.0/0       | Open (plain HTTP -)          |
+| 443  | TCP      | HTTPS                 | 0.0.0.0/0       | Open and waiting for SSL (Manual HTTPS setup Required, Optional)                 |
 
 **All other ports are blocked** – no extra rules exist in the VCN security list.
 
