@@ -208,14 +208,18 @@ terraform apply -var="compartment_id=..." -var='vm_names=["web1","db1","app1"]'
 # 4. Both together
 terraform apply -var="compartment_id=..." -var="vm_count=5" -var='vm_names=["web1","db2","app1","cache1","cache2"]'
 ```
+<img width="1918" height="1030" alt="image" src="https://github.com/user-attachments/assets/3670e5b5-df72-4c63-9e4a-d383dd847b3e" />
+<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/91824bca-7fed-44a7-9e64-d280767daecc" />
 
-SSH into your VMs and edit your personal sites-- all can be edited from the playbook.yaml file or individually. 
+# SSH into your VMs and edit your personal sites-- all can be edited from the playbook.yaml file or individually. 
 
 ```bash
 ssh -i ~/.ssh/my_oci_key ubuntu@x.x.x.x
 sudo nano /var/www/html/index.php
 ```
 <img width="1174" height="669" alt="image" src="https://github.com/user-attachments/assets/e4f10186-91bf-40eb-9a32-e4f3805ddf19" />
+-  These are the index.php webpages-- The previous screenshots are to the direct IP address. Keep this in mind, and add configurations, buttons, and links as you build your website. Also keep in mind you'll likely need a domain so people won't need to ping your server directly. Additionally you'll want to have HTTPS and prevent attacks on your server, so cloudflare and other providers might be a great option. I made a project using K8 Clusters to host web servers using cloudflare and provide a short tutorial on that repo. Take a look if you can. Thank you! 
+
 <img width="1919" height="1035" alt="image" src="https://github.com/user-attachments/assets/beb6250d-37c8-4e44-9749-c209ed6d0ac7" />
 <img width="1919" height="1035" alt="image" src="https://github.com/user-attachments/assets/932c1a13-b00c-423e-8623-ece69d6f7c0c" />
 
