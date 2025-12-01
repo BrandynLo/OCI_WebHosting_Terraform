@@ -44,11 +44,10 @@ This Terraform repository automates the provisioning of production-ready, public
 - **Oracle Cloud Account** – You must have an Oracle Cloud account and set up your OCI credentials. [Create an Oracle Cloud Account](https://www.oracle.com/cloud/free/)
 - **OCI CLI** – Install the Oracle Cloud Infrastructure Command Line Interface (CLI) to authenticate and interact with your OCI tenancy. [OCI CLI Installation Guide](https://docs.oracle.com/en-us/iaas/Content/SDKDocs/cliinstall.htm)
 
-## Usage and *General Oracle Cloud Always Free Tier Limits:*
-- Proceed with caution on additional cost allocation as currently:
+## Usage and General Oracle Cloud Always Free Tier Limits:
+-Proceed with caution on additional cost allocation as currently:
 
-Compute (VMs):
-
+-These are the listed support for free-tier within OCI as of Nov.2025. 
 - 2 VMs (each with 1 OCPU and 1 GB RAM) eligible for Always Free.
 
 - Block Storage:
