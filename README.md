@@ -209,10 +209,6 @@ terraform apply -var="compartment_id=..." -var='vm_names=["web1","db1","app1"]'
 terraform apply -var="compartment_id=..." -var="vm_count=5" -var='vm_names=["web1","db2","app1","cache1","cache2"]'
 ```
 
-<img width="1918" height="1030" alt="image" src="https://github.com/user-attachments/assets/e256fa9d-336b-4eaa-96b8-cb827d40b13f" />
-<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/926fdf9c-3198-4cad-9165-9bcc81d1d35f" />
-
-
 SSH into your VMs and edit your personal sites-- all can be edited from the playbook.yaml file or individually. 
 
 ```bash
