@@ -205,7 +205,7 @@ resource "null_resource" "run_ansible" {
   }
 #If the VM is changed or removed, OR playbook.yml is changed, trigger makes sure ansible is applied once again on that vm.
 #Everything below is information to debug and grab ip addresses and verify ansible is working correctly.
-
+#Code below Waits until SSH access to the machine is working, then ansible will run to apply packages from playbook.yml USING OUR CREDENTIALS from ~/.ssh/my_oci_key
 
   provisioner "local-exec" {
     environment = {
@@ -219,7 +219,6 @@ resource "null_resource" "run_ansible" {
       IP="${each.value.public_ip}"
       echo "Quick-waiting for SSH on $IP..."
       until ssh -i ~/.ssh/my_oci_key -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 ubuntu@$IP true 2>/dev/null; do sleep 5; done    
-    #Waits until SSH access to the machine is working, then ansible will run to apply packages from playbook.yml USING OUR CREDENTIALS from ~/.ssh/my_oci_key
       echo "SSH ready – running Ansible immediately..."
       ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i "$IP," --user ubuntu --private-key ~/.ssh/my_oci_key playbook.yml
       echo "DONE → http://$IP"
