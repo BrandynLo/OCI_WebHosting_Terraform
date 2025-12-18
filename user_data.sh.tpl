@@ -2,18 +2,26 @@
 # user_data.sh.tpl
 
 set -euo pipefail
+#stop if anything fails. 
 
 echo "Waiting for cloud-init..."
 /usr/bin/cloud-init status --wait > /dev/null
+#Prints logs for user, and waits to install any packages until oracle is running.
 
 export DEBIAN_FRONTEND=noninteractive
+#Automatically accept yes/no interactions.
 apt-get update > /dev/null
 apt-get install -y python3-pip git iptables-persistent --no-install-recommends > /dev/null
 python3 -m pip install --quiet --no-cache-dir ansible > /dev/null
+#Install git, python, ansible, and save firewall config rules.
+
+#Below is where our library of files to be installed called "playbook.yml" will be saved in the home directory of the VM.
+#On startup, the file will run the playbook.yml after terraform.apply is set -> look in main.tf for templatefile calling this file.
+
 
 cat > /home/ubuntu/playbook.yml <<'EOF'
 ---
-- name: LAMP + PostgreSQL 16 for Oracle Cloud Always Free
+- name: LAMP + PostgreSQL 16
   hosts: localhost
   become: yes
   vars:
