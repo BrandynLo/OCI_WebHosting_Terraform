@@ -1,5 +1,5 @@
 ---
-- name: Production Public LAMP + PostgreSQL 16 + Full Auto Updates (A1/Flex Ready)
+- name: Lamp Stack and PostgreSQL 16 Setup
   hosts: all
   become: yes
   vars:
@@ -47,7 +47,7 @@
         state: absent
       ignore_errors: yes
 
-    - name: Save iptables rules so the fix survives reboot
+    - name: Save iptables rules
       ansible.builtin.command: netfilter-persistent save
       when: ansible_os_family == "Debian"
 
@@ -68,7 +68,7 @@
         that: php_ini_search.matched > 0
         fail_msg: "No php.ini found – something is very wrong"
 
-    - name: Harden PHP (disable dangerous functions + hide version)
+    - name: Harden PHP
       ansible.builtin.lineinfile:
         path: "{{ php_ini_path }}"
         regexp: "{{ item.regexp }}"
@@ -116,7 +116,7 @@
         mode: '0644'
       notify: Restart Apache
 
-    - name: Modern security headers (2025 best practice)
+    - name: Modern security headers
       ansible.builtin.copy:
         dest: /etc/apache2/conf-enabled/headers.conf
         content: |
@@ -163,7 +163,7 @@
           <html lang="en">
           <head>
             <meta charset="utf-8">
-            <title>Live on Oracle Cloud Always Free</title>
+            <title>Live on Oracle Cloud</title>
             <style>
               body{font-family:system-ui,sans-serif;text-align:center;padding:4rem;background:#0f172a;color:#e2e8f0;}
               h1{font-size:3rem;margin:2rem 0;}
@@ -172,9 +172,9 @@
             </style>
           </head>
           <body>
-            <h1>Success! It works.</h1>
+            <h1>Configuration Is Succesful.</h1>
             <p>Arm/AMD-powered LAMP + PostgreSQL 16 stack</p>
-            <div class="badge">Running on Always Free Tier – 100% working</div>
+            <div class="badge">Configuration Complete</div>
             <p><strong>IP:</strong> <?php echo $_SERVER['SERVER_ADDR']; ?> | <strong>Host:</strong> <?php echo gethostname(); ?></p>
             <p>PHP <?php echo phpversion(); ?> • Apache • Ubuntu 22.04</p>
           </body>
