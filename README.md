@@ -44,23 +44,6 @@ This Terraform repository automates the provisioning of VMs and VCNs to host pub
 - **Oracle Cloud Account** – You must have an Oracle Cloud account and set up your OCI credentials. [Create an Oracle Cloud Account](https://www.oracle.com/cloud/free/)
 - **OCI CLI** – Install the Oracle Cloud Infrastructure Command Line Interface (CLI) to authenticate and interact with your OCI tenancy. [OCI CLI Installation Guide](https://docs.oracle.com/en-us/iaas/Content/SDKDocs/cliinstall.htm)
 
-## Usage and General Oracle Cloud Always Free Tier Limits:
--Proceed with caution on additional cost allocation as currently:
-
--These are the listed support for free-tier within OCI as of Nov.2025. 
-- 2 VMs (each with 1 OCPU and 1 GB RAM) eligible for Always Free.
-
-- Block Storage:
-
-- 100 GB of block storage (shared across all free-tier VMs).
-
-- Public IPs:
-
-- 1 Public IP per free VM is free (additional ones might incur charges).
-
-- Bandwidth:
-
-- 10 TB outbound data transfer per month is free.
 
 ## Security Overview – Hardened & Ready for Production
 
