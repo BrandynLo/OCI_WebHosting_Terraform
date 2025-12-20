@@ -85,13 +85,6 @@ Currently port 80 is open, HTTP only:
    git clone github.com/BrandynLo/OCI_WebHosting_Terraform
    ```
 
-## Prerequisites
-| Requirement | Details |
-|-----------|---------|
-| **OCI Account** | Free Tier or Paid [](https://www.oracle.com/cloud/) |
-| **Terraform** | `v1.5+` |
-| **OCI CLI** | Latest version |
-| **OS** | Tested on **Ubuntu 22.04+** (VM or local) |
 ## Install Terraform (Ubuntu/Debian)
 ```bash
 sudo apt update && sudo apt install -y gnupg software-properties-common
