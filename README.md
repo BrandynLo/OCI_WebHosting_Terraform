@@ -5,6 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This Terraform repository automates the provisioning of VMs and VCNs to host publicly accessible web servers on Oracle Cloud Infrastructure (OCI). Each instance is deployed with a fully hardened LAMP stack (Ubuntu 22.04, Apache, PHP 8, PostgreSQL 16) including automatic security updates, modern HTTP headers, and server-side hardening applied immediately via Ansible.
+
+- Project was inspired by a buddy who wanted to host a portfolio website of their digital artwork. Decided to take a chance and sign up for Oracles free account services to explore and try to set it up for em.
+  
 ## Features
 
 - **Fully Automated Deployment:** Provision real, live web servers on Oracle Cloud with a simple `terraform apply` command.
