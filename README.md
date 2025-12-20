@@ -176,20 +176,20 @@ sudo apt update && sudo apt install -y ansible
 - You will be prompted for compartment ID. This is located on your OCI container you made on the OCI website. 
 - Below is CODE Syntax:
 ```bash
-# 1. Deploy (just pass compartment ID)
-terraform apply -var="compartment_id=ocid1.compartment.oc1..aaaa..."
+# 1. Deploy
+terraform apply
 
-# 1.5 Deploy Just One Container
+# 1.5 Deploy Just One Container (default hardcoded)
 terraform apply
 
 # 2. VMs with default names
-terraform apply -var="compartment_id=..." -var="vm_count=5"
+terraform apply -var="vm_count=5"
 
 # 3. VMs with custom names  
-terraform apply -var="compartment_id=..." -var='vm_names=["web1","db1","app1"]'
+terraform apply -var='vm_names=["web1","db1","app1"]'
 
 # 4. Both together
-terraform apply -var="compartment_id=..." -var="vm_count=5" -var='vm_names=["web1","db2","app1","cache1","cache2"]'
+terraform apply -var="vm_count=5" -var='vm_names=["web1","db2","app1","cache1","cache2"]'
 ```
 <img width="1918" height="1030" alt="image" src="https://github.com/user-attachments/assets/3670e5b5-df72-4c63-9e4a-d383dd847b3e" />
 <img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/91824bca-7fed-44a7-9e64-d280767daecc" />
